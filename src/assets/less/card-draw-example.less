@@ -1,0 +1,279 @@
+/*
+* @niuthor: Administrator
+* @Date:   2017-01-11 15:33:23
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-01-11 16:32:03
+*/
+body {
+  background-color: #ef4036;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#projects {
+  background-color: #ef4036;
+  overflow: hidden;
+  min-height: 100vh;
+}
+@media screen and (min-width: 765px) {
+    #projects {
+        background-color: blue;
+        min-height: 125vh;
+    }
+}
+
+.project {
+  position: absolute;
+  right: 25px;
+  top: 745px;
+  margin: 0 0 15px 15px;
+}
+.project {
+  float: left;
+  width: 222px;
+  height: 311px;
+}
+div.projects .controls {
+  position: absolute;
+  right: 25px;
+  top: 745px;
+}
+div.projects .controls {
+  float: left;
+  width: 222px;
+  height: 311px;
+}
+.controls .mask {
+  float: left;
+  position: relative;
+  background: url(../img/card-draw/project_card_bg.png) no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 32px;
+}
+div.projects .controls .bottom {
+  transition: all 0.3s ease;
+}
+div.projects .controls .bottom {
+  background: url(../img/card-draw/project_card_bot_bg.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -9px;
+  right: 0;
+  width: 222px;
+  height: 66px;
+}
+
+div.projects .controls .bottom + .bottom + .bottom {
+  bottom: -3px;
+}
+div.projects .controls .bottom + .bottom {
+  bottom: -6px;
+}
+
+div.projects .controls:hover .bottom + .bottom + .bottom {
+  bottom: -8px;
+}
+div.projects .controls:hover .bottom + .bottom {
+  bottom: -14px;
+}
+div.projects .controls:hover .bottom {
+  bottom: -20px;
+}
+
+.project.ani0 {
+  right: 505px;
+  top: 65px;
+}
+.project.ani1 {
+  right: 265px;
+  top: 65px;
+}
+.project.ani2 {
+  right: 25px;
+  top: 65px;
+}
+.project.ani3 {
+  right: 505px;
+  top: 405px;
+}
+.project.ani4 {
+  right: 265px;
+  top: 405px;
+}
+.project.ani5 {
+  right: 25px;
+  top: 405px;
+}
+.project.ani6 {
+  right: 505px;
+  top: 745px;
+}
+.project.ani7 {
+  right: 265px;
+  top: 745px;
+}
+
+.project span {
+  display: inline-block;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  margin-top: 75px;
+}
+.project.ani0 span {
+  background: #ef4036;
+}
+.project.ani1 span {
+  background: #ff6c00;
+}
+.project.ani2 span {
+  background: #ffde00;
+}
+.project.ani3 span {
+  background: #0ce501;
+}
+.project.ani4 span {
+  background: #05e7df;
+}
+.project.ani5 span {
+  background: #007df1;
+}
+.project.ani6 span {
+  background: #8e00f1;
+}
+.project.ani7 span {
+  background: #000000;
+}
+
+.aniwz {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 32px;
+}
+.start {
+  padding-top: 130px;
+}
+.project .front {
+  background: url(../img/card-draw/project_front_bg.png) no-repeat;
+  background-size: 100% 100%;
+  display: table;
+}
+.project .back,
+.project .front {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.project .back {
+  background: url(../img/card-draw/project_back_bg.png) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+  font-size: 42px;
+}
+.project .back,
+.project .front {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 222px;
+  height: 311px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.project,
+.project .back,
+.project .front,
+.socials a,
+.transform_holder .back,
+.transform_holder .front,
+.transform_holder .transform {
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.project {
+  perspective: 1000;
+  transform-style: preserve-3d;
+}
+.project .back,
+.project .front {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.project .front {
+  transform: rotateY(0deg);
+}
+.project .back {
+  transform: rotateY(180deg);
+}
+.project.hover .front,
+.project.showli .front {
+  transform: rotateY(180deg);
+}
+.project.hover .back,
+.project.showli .back {
+  transform: rotateY(0deg);
+}
+.bg_bg,
+.bg_main {
+  position: fixed;
+}
+.bg_bg {
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.bg_main {
+  top: 45%;
+  left: 22%;
+  width: 65%;
+  min-height: 100px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.bg_main .info {
+  padding: 10px;
+  text-align: center;
+  line-height: 42px;
+}
+.bg_main .btn span {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  border-top: solid 1px #e8e8e8;
+  padding: 10px 0;
+}
+.bg_main .btn span.qrxz {
+  border-right: solid 1px #e8e8e8;
+  color: #ef4036;
+}
